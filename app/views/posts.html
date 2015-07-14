@@ -1,0 +1,79 @@
+<section class="fb-parse">
+  <div class="row">
+    <article class="col-md-12">
+      <div ng-include="'partials/_ariane.html'"></div>
+      <h1>Post selection</h1>
+      <h3 ng-show="errorMsg.length>0" class="text-danger text-center">{{errorMsg}}</h3>
+      <br>
+      <form class="form-horizontal" role="form" name="myForm" novalidate>
+        <div class="form-group">
+          <label for="inputSince" class="col-sm-2 control-label">Since</label>
+          <div class="col-sm-3">
+            <input class="form-control" id="inputSince" type="date" name="input" ng-model="since">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputUntil" class="col-sm-2 control-label">Until</label>
+          <div class="col-sm-3">
+            <input class="form-control" id="inputUntil" type="date" name="input" ng-model="until">
+          </div>
+        </div>
+        <!--div class="form-group">
+          <label for="inputLimit" class="col-sm-2 control-label">Limit</label>
+          <div class="col-sm-3">
+            <input type="number" class="form-control" id="inputLimit" name="input" ng-model="limit">
+          </div>
+        </div-->
+        <div class="form-group">
+          <h3 class="text-danger col-sm-2 text-right">OR</h3>
+        </div>
+        <div class="form-group">
+          <label for="inputID" class="col-sm-2 control-label">Post ID</label>
+          <div class="col-sm-3">
+            <input class="form-control" id="inputID" type="text" name="input" ng-model="ogid">
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-info btn-lg" type="submit" ng-click="request($event)">Show posts</button>
+        </div>
+      </form>
+      <div ng-show="tab.length>0">
+        <br>
+        <p>Number of posts returned: {{posts_count}}</p>
+        <p ng-show="tab.length>1" class="text-center">
+          <span class="arrows space-right glyphicon glyphicon-chevron-left" ng-click="turnPage(false)"></span>
+          <span class="arrows glyphicon glyphicon-chevron-right" ng-click="turnPage(true)"></span>
+        </p>
+        <p class="text-center">{{index+1}} / {{tab.length}}</p>
+        <table ng-class="{'my-table': tab.length>1}" class="table-striped table-bordered">
+          <thead>
+          <tr>
+            <th>Post ID</th>
+            <th>Message</th>
+            <th>Likes</th>
+            <th>Comments</th>
+            <th>Shares</th>
+            <!--th>Type</th-->
+            <th>Date</th>
+            <th>Pick</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng:repeat="row in tab[index]">
+            <td class="info text-center"><a ng-href="https://www.facebook.com/{{ariane_pageId}}/posts/{{getId(row.post_id).part2}}" target="_blank">{{getId(row.post_id).part2}}</a></td>
+            <td class="message">{{row.message}}</td>
+            <td class="info text-center">{{row.likes}}</td>
+            <td class="info text-center">{{row.comments}}</td>
+            <td class="info text-center">{{row.shares}}</td>
+            <!--td class="info text-center">{{row.type}}</td-->
+            <td class="info text-center">{{row.created_time}}</td>
+            <td class="info text-center"><button class="btn btn-primary" ng-click="pick(row.post_id)">Select</button></td>
+          </tr>
+          </tbody>
+        </table>
+        <br>
+      </div>
+    </article>
+  </div>
+</section>
+<span us-spinner spinner-start-active="1" spinner-key="spinner-1"></span>

@@ -1,0 +1,204 @@
+<section class="fb-parse">
+  <div class="row">
+    <article class="col-md-12">
+      <div ng-include="'partials/_ariane.html'"></div>
+      <div ng-show="showDl" class="text-right">
+        <p><button class="btn btn-info" ng-click="dlRawLikes()">Download likes</button></p>
+        <p><button class="btn btn-info" ng-click="dlRawComments()">Download comments</button></p>
+      </div>
+      <h1>Filters</h1>
+      <h3 ng-show="errorMsg.length>0" class="text-danger text-center">{{errorMsg}}</h3>
+      <form  ng-class="{'check-form': checkForm}" class="form-horizontal" role="form" name="filterForm" novalidate>
+
+        <div class="form-group">
+          <p class="col-sm-3 control-label"><strong>People who</strong></p>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="actions" id="actionL" value="l" ng-model="action">
+                like the post
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="actions" id="actionC" value="c" ng-model="action">
+                comment the post
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="actions" id="actionLC" value="cl" ng-model="action">
+                like and comment the post
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" ng-show="action=='c' || action=='cl'">
+          <label for="inputWord" class="col-sm-3 control-label">Comments which contain</label>
+          <div class="col-sm-3">
+            <input class="form-control" id="inputWord" type="text" name="inputWord" ng-model="word">
+          </div>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="wordss" id="wordType1" value="type1" ng-model="wordType">
+                Everyone (and)
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="words" id="wordType2" value="type2" ng-model="wordType">
+                Anyone (or)
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="words" id="wordType3" value="type3" ng-model="wordType">
+                Exactly same content
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!--div class="form-group">
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="checkLike" id="checkLike">
+                Allow those who don't like the page
+              </label>
+            </div>
+          </div>
+        </div-->
+        <div ng-show="action=='c' || action=='cl'">
+          <div class="form-group">
+            <p class="col-sm-3 control-label"><strong>Ignore if</strong></p>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="checkTags" id="checkTags" ng-model="checkTags">
+                  no tags
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="checkLink" id="checkLink" ng-model="checkLink">
+                  no link
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="checkPhoto" id="checkPhoto" ng-model="checkPhoto">
+                  no photo
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-show="action=='c' || action=='cl'" class="form-group">
+          <p class="col-sm-3 control-label"><strong>Multiple comments</strong></p>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="multiCom" id="multiCom1" value="type1" ng-model="multiCom">
+                Take the most liked
+              </label>
+            </div>
+          </div>
+          <div>
+            <div class="col-sm-offset-3 col-sm-10">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="multiCom" id="multiCom2" value="type2" ng-model="multiCom">
+                  Take the first one
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-offset-3 col-sm-10">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="multiCom" id="multiCom3" value="type3" ng-model="multiCom">
+                  Take all
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-show="action=='c' || action=='cl'">
+          <div class="form-group">
+            <label for="inputFrom" class="col-sm-3 control-label">From</label>
+            <div class="col-sm-3">
+              <input class="form-control" id="inputFrom" type="date" name="input" ng-model="from">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputTo" class="col-sm-3 control-label">To</label>
+            <div class="col-sm-3">
+              <input class="form-control" id="inputTo" type="date" name="input" ng-model="to">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputWord" class="col-sm-3 control-label">Number of winners</label>
+          <div class="col-sm-3 checkbox">
+            <input class="form-control" id="inputNbwin" type="number" name="inputNbwin" ng-model="nbwin" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <p class="col-sm-3 control-label"><strong>What to pick</strong></p>
+          <div class="col-sm-offset-3 col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="winType" id="winType1" value="type1" ng-model="winType">
+                Get {{nbwin}} random winners from all entries
+              </label>
+            </div>
+          </div>
+          <div ng-show="action=='c' || action=='cl'">
+            <div class="col-sm-offset-3 col-sm-10">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="winType" id="winType2" value="type2" ng-model="winType">
+                  Get {{nbwin}} random winners from <input id="inputToplike" class="form-control" type="number" name="inputToplike" ng-model="topLike"> most liked comments
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-offset-3 col-sm-10">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="winType" id="winTypeL3" value="type3" ng-model="winType">
+                  Get the first {{nbwin}} winners with the highest number of like
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="submit form-group text-center">
+          <button class="btn btn-primary" ng-click="pickWinners()" type="submit">Apply</button>
+        </p>
+      </form>
+    </article>
+  </div>
+</section>
+<span us-spinner spinner-start-active="1" spinner-key="spinner-1"></span>

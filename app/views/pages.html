@@ -1,0 +1,18 @@
+<section class="fb-parse">
+  <div class="row">
+    <article class="col-md-12">
+      <h1>Page selection</h1>
+      <div ng-show="ready">
+        <p><select class="pages" ng-model="pageSelected" ng-options="p.name for p in pages"></select></p>
+        <div class="page-info">
+        <p class="text-center"><img class="img-rounded" ng-src="https://graph.facebook.com/{{pageSelected.id}}/picture?type=normal" alt="{{pageSelected.name}}"></p>
+        <h2 class="text-center"><a ng-href="https://www.facebook.com/{{pageSelected.id}}" target="_blank">{{pageSelected.name}}</a></h2>
+        <p class="text-center">Page ID: {{pageSelected.id}} | Category: {{pageSelected.category}} | Likes: {{pageSelected.likes}}</p>
+        </div>
+        <br>
+        <p class="text-center"><a class="btn btn-large btn-primary" href="#" type="button" ng-click="next($event)">Select page</a></p>
+      </div>
+    </article>
+  </div>
+</section>
+<span us-spinner spinner-key="spinner-1" spinner-start-active="1"></span>

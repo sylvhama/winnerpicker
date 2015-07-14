@@ -1,0 +1,17 @@
+{
+  "name": "angular-facebook",
+  "main": "./angular-facebook.js",
+  "dependencies": {
+    "angular": "*"
+  },
+  "homepage": "https://github.com/sylvhama/bower-angular-facebook",
+  "_release": "78f0d27543",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "78f0d2754307c6b3b080322b7a89f93ef91d8500"
+  },
+  "_source": "git://github.com/sylvhama/bower-angular-facebook.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/sylvhama/bower-angular-facebook.git"
+}

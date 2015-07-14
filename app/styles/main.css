@@ -1,0 +1,360 @@
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \000031;
+  }
+}
+
+h1 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \000036;
+  }
+}
+
+.pages {
+  font-size: 22px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000311;
+  }
+}
+
+table th {
+  padding: 10px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000315;
+  }
+}
+
+table .message {
+  padding: 10px;
+  width: 40%;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000320;
+  }
+}
+
+table .info {
+  padding: 10px;
+  width: 10%;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000326;
+  }
+}
+
+form,
+.page-info {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000332;
+  }
+}
+
+.page-info {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000337;
+  }
+}
+
+.btn-success,
+.btn-danger,
+.btn-info {
+  min-width: 180px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000341;
+  }
+}
+
+.arrows {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000345;
+  }
+}
+
+.space-right {
+  margin-right: 30px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000349;
+  }
+}
+
+#inputToplike {
+  max-width: 80px;
+  height: 22px;
+  padding: 1px;
+  display: inline;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000356;
+  }
+}
+
+input {
+  text-align: center !important;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000360;
+  }
+}
+
+.pick {
+  font-size: 30px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000363;
+  }
+}
+
+.pick:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000369;
+  }
+}
+
+.no-button {
+  background-color: #fff !important;
+  border: none !important;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000375;
+  }
+}
+
+.check-form input.ng-invalid.ng-dirty,
+.check-form input.ng-invalid.ng-invalid-required {
+  background-color: #FA787E;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000380;
+  }
+}
+
+.winner-wrapper {
+  margin-bottom: 15px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000383;
+  }
+}
+
+.winner-wrapper .winner {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-height: 200px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000389;
+  }
+}
+
+.winner-wrapper .winner .selector {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000394;
+  }
+}
+
+.winner-wrapper .winner:hover {
+  padding: 9px;
+  border: 2px solid #428bca;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \0000399;
+  }
+}
+
+.winner-wrapper .winner .profile-picture {
+  width: 100px;
+  height: 100px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003104;
+  }
+}
+
+.winner-wrapper .winner .post-picture {
+  height: 350px;
+  margin: 0 auto;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003110;
+  }
+}
+
+.winner-wrapper .selected {
+  padding: 9px;
+  border: 2px solid #5cb85c;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/var\/www\/asiance\/winnerpicker\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \00003113;
+  }
+}
+
+.winner-wrapper .selected:hover {
+  border: 2px solid #5cb85c;
+}

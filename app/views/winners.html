@@ -1,0 +1,51 @@
+<section class="fb-parse">
+  <div class="row">
+    <article class="col-md-12">
+      <div ng-include="'partials/_ariane.html'"></div>
+      <div ng-show="showPhotos" class="text-right">
+        <p><button class="btn btn-info" ng-click="dlPhotos()">Download Photos</button></p>
+      </div>
+      <h1>Winners</h1>
+      <p class="submit form-group text-center">
+        <button class="pick btn btn-primary" ng-click="getWinners()">
+            <span ng-class="{'fader-true':hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false" class="pick gnj-fader" id="gnj-fader-0">
+              <span style="animation-delay: -1200ms, -1200ms; -webkit-animation-delay: -1200ms, -1200ms;">P</span>
+              <span style="animation-delay: -1100ms, -1100ms; -webkit-animation-delay: -1100ms, -1100ms;">I</span>
+              <span style="animation-delay: -1000ms, -1000ms; -webkit-animation-delay: -1000ms, -1000ms;">C</span>
+              <span style="animation-delay: -900ms, -900ms; -webkit-animation-delay: -900ms, -900ms;">K</span>
+              <span style="animation-delay: -800ms, -800ms; -webkit-animation-delay: -800ms, -800ms;">&nbsp;</span>
+              <span style="animation-delay: -700ms, -700ms; -webkit-animation-delay: -700ms, -700ms;">W</span>
+              <span style="animation-delay: -600ms, -600ms; -webkit-animation-delay: -600ms, -600ms;">I</span>
+              <span style="animation-delay: -500ms, -500ms; -webkit-animation-delay: -500ms, -500ms;">N</span>
+              <span style="animation-delay: -400ms, -400ms; -webkit-animation-delay: -400ms, -400ms;">N</span>
+              <span style="animation-delay: -300ms, -300ms; -webkit-animation-delay: -300ms, -300ms;">E</span>
+              <span style="animation-delay: -200ms, -200ms; -webkit-animation-delay: -200ms, -200ms;">R</span>
+              <span style="animation-delay: -100ms, -100ms; -webkit-animation-delay: -100ms, -100ms;">S</span>
+            </span>
+        </button>
+      </p>
+        <div class="row">
+          <p>Total: {{winners.length}}</p>
+          <p>Selected: {{countSelected()}}</p>
+          <p class="text-center">
+            <button class="btn btn-info" type="submit" ng-click="selectAll()">Select all</button>
+            <button class="btn btn-info" type="submit" ng-click="deselectAll()">Deselect all</button>
+          </p>
+          <br>
+          <div ng-class="{'col-sm-6':showPhotos, 'col-sm-3':!showPhotos}" class="winner-wrapper" ng:repeat="winner in winners">
+            <div ng-class="{'selected':winner.selected}" class="winner">
+              <span ng-class="{'glyphicon-remove':winner.selected, 'glyphicon-plus':!winner.selected}" ng-click="winner.selected=!winner.selected" class="glyphicon pull-right selector"></span>
+              <p class="text-"><strong>{{winner.name}}</strong></p>
+              <p>User ID: <a ng-href="https://www.facebook.com/{{winner.id}}" target="_blank">{{winner.id}}</a></p>
+              <p ng-if="winner.comment_id.length>0">Comment ID: <a ng-href="https://www.facebook.com/{{ariane_pageId}}/posts/{{ariane_postId}}?comment_id={{getId(winner.comment_id).part2}}" target="_blank">{{getId(winner.comment_id).part2}}</a></p>
+              <p class="text-center"><img class="img-rounded profile-picture" ng-src="https://graph.facebook.com/{{winner.id}}/picture?type=normal" alt="{{winner.name}}"></p>
+              <div ng-if="showPhotos">
+                <p>Photo posted:</p>
+                <p><a ng-href="{{winner.photoSrc}}" download="{{winner.name}}" target="_blank"><img class="img-rounded img-responsive post-picture" ng-src="{{winner.photoSrc}}" alt="Photo by {{winner.name}}"></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </article>
+  </div>
+</section>
